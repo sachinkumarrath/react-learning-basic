@@ -1,5 +1,6 @@
 .sidebar{
-  width: 200px;
+  height: 100%;
+  // width: 40px;
   /* https://cssgradient.io/ */
   background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(86,45,253,1) 100%);
   color: #fff;
@@ -9,7 +10,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 0 10rem;
+  padding: 0 3rem;
   a {
     color: white;
     text-decoration: none;

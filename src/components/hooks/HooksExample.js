@@ -1,23 +1,31 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
 
 import Sidebar from '../common/Sidebar'
-import HooksCounter from "./Counter";
+import { HooksRouter } from '../../AppRouter';
 
 const HooksExample = () => {
   const links = [{
     url: "/react-hooks/counter",
     title: "Counter"
+  }, {
+    url: "/react-hooks/usecallback",
+    title: "useCallback"
+  }, {
+    url: "/react-hooks/usecontext",
+    title: "useContext"
+  }, {
+    url: "/react-hooks/usememo",
+    title: "useMemo"
+  }, {
+    url: "/react-hooks/usereducer",
+    title: "useReducer"
   }]
 
-  return <div class="content-container">
+  return <div className="content-container">
       <Sidebar links={links} />
       <div className="content-area">
         <h3>Hooks Examples</h3>
-        <Switch>
-          <Route path="/react-hooks/counter"><HooksCounter /></Route>
-          <Route><p>Click on the sidebar for specific examples</p></Route>
-        </Switch>
+        <HooksRouter />
       </div>
     </div>
 }
